@@ -9,12 +9,28 @@
 import Foundation
 import AVFoundation
 import AudioToolbox
+import UIKit
 
 struct MusicState{
-    static var leftPlayer:AVAudioPlayer!
-    static var rightPlayer:AVAudioPlayer!
-    
-    static var leftPath:String?
-    static var rightPath:String?
-    
+    var player:AVAudioPlayer!
+    var pan:Float!
+    var path:String?
+    var numberOfLoops:Int!
+    var isPlaying:Bool!
+    var volume:Float!
+    var song:Song?
+//    static var avLeftPlayer:AVPlayer!
+}
+
+struct MusicPlayers{
+    static var musicStates = [MusicState]()
+}
+
+struct Song{
+    var name:String?
+    var duration:Int?
+    var artist:String?
+    var genre:String?
+    var album:String?
+    var albumArt:UIImage?
 }

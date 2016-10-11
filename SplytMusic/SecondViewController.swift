@@ -12,7 +12,7 @@ import AudioToolbox
 
 
 
-class SecondViewController: UIViewController{
+class SecondViewController: UIViewController, AVAudioPlayerDelegate{
 
     @IBOutlet weak var web: UIWebView!
     override func viewDidLoad() {

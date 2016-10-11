@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE16A6421DA985F000294D7F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE16A6411DA985F000294D7F /* MediaPlayer.framework */; };
+		FE1BBCEF1DAAE4E600E2BB89 /* Discovery_(Album_Art).jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE1BBCEE1DAAE4E600E2BB89 /* Discovery_(Album_Art).jpg */; };
+		FE1BBCF11DAAE4EC00E2BB89 /* st-lucia-dancing-on-glass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE1BBCF01DAAE4EC00E2BB89 /* st-lucia-dancing-on-glass.jpg */; };
+		FE3EE6F11DAAD88300FF0FC4 /* Capture.PNG in Resources */ = {isa = PBXBuildFile; fileRef = FE3EE6F01DAAD88300FF0FC4 /* Capture.PNG */; };
+		FE3EE6F31DAADE7600FF0FC4 /* CI5wl3.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EE6F21DAADE7600FF0FC4 /* CI5wl3.png */; };
 		FEACB1C81DA8B79B0068AC10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB1C71DA8B79B0068AC10 /* AppDelegate.swift */; };
 		FEACB1CA1DA8B79B0068AC10 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB1C91DA8B79B0068AC10 /* FirstViewController.swift */; };
 		FEACB1CC1DA8B79B0068AC10 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB1CB1DA8B79B0068AC10 /* SecondViewController.swift */; };
@@ -39,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE16A6411DA985F000294D7F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		FE1BBCEE1DAAE4E600E2BB89 /* Discovery_(Album_Art).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Discovery_(Album_Art).jpg"; sourceTree = "<group>"; };
+		FE1BBCF01DAAE4EC00E2BB89 /* st-lucia-dancing-on-glass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "st-lucia-dancing-on-glass.jpg"; sourceTree = "<group>"; };
+		FE3EE6F01DAAD88300FF0FC4 /* Capture.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Capture.PNG; sourceTree = "<group>"; };
+		FE3EE6F21DAADE7600FF0FC4 /* CI5wl3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CI5wl3.png; sourceTree = "<group>"; };
 		FEACB1C41DA8B79B0068AC10 /* SplytMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplytMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEACB1C71DA8B79B0068AC10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEACB1C91DA8B79B0068AC10 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE16A6421DA985F000294D7F /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE16A6401DA985F000294D7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE16A6411DA985F000294D7F /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FEACB1BB1DA8B79B0068AC10 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +110,7 @@
 				FEACB1DD1DA8B79B0068AC10 /* SplytMusicTests */,
 				FEACB1E81DA8B79B0068AC10 /* SplytMusicUITests */,
 				FEACB1C51DA8B79B0068AC10 /* Products */,
+				FE16A6401DA985F000294D7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +129,10 @@
 			children = (
 				FEACB1F71DA9579F0068AC10 /* daft_punk.mp3 */,
 				FEACB1F81DA9579F0068AC10 /* st_lucia.mp3 */,
+				FE1BBCF01DAAE4EC00E2BB89 /* st-lucia-dancing-on-glass.jpg */,
+				FE1BBCEE1DAAE4E600E2BB89 /* Discovery_(Album_Art).jpg */,
+				FE3EE6F21DAADE7600FF0FC4 /* CI5wl3.png */,
+				FE3EE6F01DAAD88300FF0FC4 /* Capture.PNG */,
 				FEACB1FB1DA957A80068AC10 /* db */,
 				FEACB1C71DA8B79B0068AC10 /* AppDelegate.swift */,
 				FEACB1C91DA8B79B0068AC10 /* FirstViewController.swift */,
@@ -258,11 +282,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE1BBCF11DAAE4EC00E2BB89 /* st-lucia-dancing-on-glass.jpg in Resources */,
+				FE3EE6F11DAAD88300FF0FC4 /* Capture.PNG in Resources */,
 				FEACB1D41DA8B79B0068AC10 /* LaunchScreen.storyboard in Resources */,
 				FEACB1D11DA8B79B0068AC10 /* Assets.xcassets in Resources */,
 				FEACB1CF1DA8B79B0068AC10 /* Main.storyboard in Resources */,
 				FEACB1FA1DA9579F0068AC10 /* st_lucia.mp3 in Resources */,
 				FEACB1F91DA9579F0068AC10 /* daft_punk.mp3 in Resources */,
+				FE3EE6F31DAADE7600FF0FC4 /* CI5wl3.png in Resources */,
+				FE1BBCEF1DAAE4E600E2BB89 /* Discovery_(Album_Art).jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +570,7 @@
 				FEACB1F01DA8B79B0068AC10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FEACB1F11DA8B79B0068AC10 /* Build configuration list for PBXNativeTarget "SplytMusicTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +579,7 @@
 				FEACB1F31DA8B79B0068AC10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FEACB1F41DA8B79B0068AC10 /* Build configuration list for PBXNativeTarget "SplytMusicUITests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +588,7 @@
 				FEACB1F61DA8B79B0068AC10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
