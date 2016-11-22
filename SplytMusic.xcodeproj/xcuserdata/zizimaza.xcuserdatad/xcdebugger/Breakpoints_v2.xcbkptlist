@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SplytMusic/MusicManager.swift"
-            timestampString = "497673023.533158"
+            timestampString = "498519003.970348"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "determineWhichPlayer(player:)"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "setupMusic()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,13 +26,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SplytMusic/FirstViewController.swift"
-            timestampString = "497736538.280368"
+            timestampString = "501527512.341961"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "246"
-            endingLineNumber = "246"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
             landmarkName = "loadItunesSong(index:item:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SplytMusic/MusicManager.swift"
+            timestampString = "501527512.341961"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "setupMusic()"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

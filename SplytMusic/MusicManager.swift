@@ -12,12 +12,12 @@ import AudioToolbox
 
 func setupMusic(){
     
-    let leftPath:String? = Bundle.main.path(forResource: "daft_punk", ofType: "mp3")
+    let leftPath:String? = nil
     if leftPath == nil{
         print("ERR: Resource path nil")
     }
     
-    let rightPath:String? = Bundle.main.path(forResource: "st_lucia", ofType: "mp3")
+    let rightPath:String? = nil
     if rightPath == nil{
         print("ERR: Resource path nil")
     }
@@ -25,11 +25,10 @@ func setupMusic(){
     
     // Left side
     do{
-        let player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: leftPath!))
-        player.prepareToPlay()
-        let song = Song(name: "One More Time", duration:nil, artist: "Daft Punk", genre: nil, album: nil, albumArt: nil)
-        let ms = MusicState(player: player, pan: -1.0, path: leftPath, numberOfLoops: 0, isPlaying:false, volume:0.5, song:song)
-        copyState(sourceState: ms, targetPlayer: player)
+        
+        let song = Song(name: "Unknown Name", duration:nil, artist: "Unknown Artist", genre: nil, album: nil, albumArt: nil)
+        let ms = MusicState(player: nil, pan: -1.0, path: leftPath, numberOfLoops: 0, isPlaying:false, volume:0.5, song:song)
+//        copyState(sourceState: ms, targetPlayer: nil)
         MusicPlayers.musicStates.append(ms)
         print("Left music set up")
     }catch{
@@ -38,11 +37,10 @@ func setupMusic(){
     
     // Right side
     do{
-        let player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: rightPath!))
-        player.prepareToPlay()
-        let song = Song(name: "Dancing On Glass", duration: 69, artist: "St. Lucia", genre: nil, album: nil, albumArt: nil)
-        let ms = MusicState(player: player, pan: 1.0, path: rightPath, numberOfLoops: 0, isPlaying:false, volume:0.5, song:song)
-        copyState(sourceState: ms, targetPlayer: player)
+        
+        let song = Song(name: "Unknown Name", duration: 69, artist: "Unknown Artist", genre: nil, album: nil, albumArt: nil)
+        let ms = MusicState(player: nil, pan: 1.0, path: rightPath, numberOfLoops: 0, isPlaying:false, volume:0.5, song:song)
+//        copyState(sourceState: ms, targetPlayer: nil)
         MusicPlayers.musicStates.append(ms)
         print("Right music set up")
     }catch{

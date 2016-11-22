@@ -12,7 +12,7 @@ import AudioToolbox
 import UIKit
 
 struct MusicState{
-    var player:AVAudioPlayer!
+    var player:AVAudioPlayer?
     var pan:Float!
     var path:String?
     var numberOfLoops:Int!

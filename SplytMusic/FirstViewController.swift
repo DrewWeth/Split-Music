@@ -9,7 +9,7 @@
 import UIKit
 import MediaPlayer
 
-class FirstViewController: UIViewController, UIWebViewDelegate, AVAudioPlayerDelegate,MPMediaPickerControllerDelegate, UINavigationControllerDelegate {
+class FirstViewController: UIViewController, AVAudioPlayerDelegate, MPMediaPickerControllerDelegate, UINavigationControllerDelegate {
     
     var activeSelector:Int!
     
@@ -40,74 +40,124 @@ class FirstViewController: UIViewController, UIWebViewDelegate, AVAudioPlayerDel
     var timerLeft:Timer!
     var timerRight:Timer!
     
+    func updatePlayButton(sender:UIButton, state:MusicState){
+        if state.isPlaying == true{
+            sender.setTitle("Pause", for: UIControlState.normal)
+        }else{
+            sender.setTitle("Play", for: UIControlState.normal)
+        }
+    }
+    
+    func stringFromTimeInterval(interval:TimeInterval) -> String {
+        let interval = Int(interval)
+        let seconds = interval % 60
+        let minutes = (interval / 60)
+        return String(format: "%02d:%02d", minutes, seconds)
+    }
+    
+    func updateView(){
+        var state = MusicPlayers.musicStates[0]
+        if state.player != nil{
+         
+        labelDurationLeft.text = stringFromTimeInterval(interval: state.player!.duration)
+
+            if state.song != nil{
+                leftLabelOne.text = state.song!.name ?? "Unknown"
+                leftLabelTwo.text = state.song!.artist ?? "Unknown"
+                imageLeft.image = state.song!.albumArt ?? UIImage(named:"album-ph.png")
+            }
+        }
+        
+        state = MusicPlayers.musicStates[1]
+        if state.player != nil {
+            labelDurationRight.text = stringFromTimeInterval(interval: state.player!.duration)
+            if state.song != nil{
+                rightLabelOne.text = state.song!.name ?? "Unknown"
+                rightLabelTwo.text = state.song!.artist ?? "Unknown"
+                imageRight.image = state.song?.albumArt ?? UIImage(named:"album-ph.png")
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         activeSelector = 0
     
-//        webOne.loadRequest(URLRequest(url: URL(string: "https://www.youtube.com/watch?v=lDKJ29357FU")!))
-//        webTwo.loadRequest(URLRequest(url: URL(string: "https://www.youtube.com/watch?v=n6RTF4OPzf8")!))
-        
         updateView()
         
         // Visual edits
-        let newSize = CGSize(width: 10, height: 10)
-        sliderProgressRight.setThumbImage(imageWithImage(image: UIImage(), scaledToSize: newSize), for: UIControlState.normal)
-        sliderProgressLeft.setThumbImage(imageWithImage(image: UIImage(), scaledToSize: newSize), for: UIControlState.normal)
+//        let newSize = CGSize(width: 10, height: 10)
+        
+        let defaultImage = UIImage(contentsOfFile: "album-ph.png")
+        sliderProgressRight.setThumbImage(defaultImage, for: UIControlState.normal)
+        sliderProgressLeft.setThumbImage(defaultImage, for: UIControlState.normal)
         
         bgImage.frame = view.bounds
         view.backgroundColor = UIColor.clear
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
-//        blurEffectView.autoresizingMask 
-//        view.insertSubview(blurEffectView, at: view.subviews.count - 1)
         view.insertSubview(blurEffectView, at: 1)
     }
     
     @IBAction func buttonPlayPressed(_ sender: UIButton) {
         // Left side
-        if MusicPlayers.musicStates[0].player.isPlaying{
-            MusicPlayers.musicStates[0].player.pause()
+        if MusicPlayers.musicStates[0].player == nil{
+            return
+        }
+        if MusicPlayers.musicStates[0].player!.isPlaying{
+            MusicPlayers.musicStates[0].player?.pause()
             
             MusicPlayers.musicStates[0].isPlaying = false
             
             updatePlayButton(sender: sender, state: MusicPlayers.musicStates[0])
             print("Left paused")
         }else{
-            MusicPlayers.musicStates[0].player.play()
-            timerLeft = Timer.scheduledTimer(timeInterval: 0.23, target: self, selector: #selector(FirstViewController.updateProgressBars), userInfo: nil, repeats: true)
+            MusicPlayers.musicStates[0].player!.play()
         
+//            Timer.scheduledTimer(withTimeInterval: 0.23, repeats: true, block: (timer:Timer) -> {
+//                updateProgressBars()
+//            })
+//            
             MusicPlayers.musicStates[0].isPlaying = true
             updatePlayButton(sender: sender, state: MusicPlayers.musicStates[0])
             print("Left play")
         }
     }
     
-    @IBAction func sliderLeftVolumeChanged(_ sender: UISlider) {
+    func sliderLeftVolumeChanged(_ sender: UISlider) {
+        if MusicPlayers.musicStates[0].player == nil{
+            return
+        }
         MusicPlayers.musicStates[0].volume = sender.value
-        MusicPlayers.musicStates[0].player.volume = sender.value
+        MusicPlayers.musicStates[0].player!.volume = sender.value
     }
     
-    @IBAction func sliderRightVolumeChanged(_ sender: UISlider) {
+    func sliderRightVolumeChanged(_ sender: UISlider) {
+        if MusicPlayers.musicStates[1].player == nil{
+            return
+        }
         MusicPlayers.musicStates[1].volume = sender.value
-        MusicPlayers.musicStates[1].player.volume = sender.value
+        MusicPlayers.musicStates[1].player!.volume = sender.value
     }
     
     
-    @IBAction func buttonRightPlayPressed(_ sender: UIButton) {
+    func buttonRightPlayPressed(_ sender: UIButton) {
         // Right side
-        if MusicPlayers.musicStates[1].player.isPlaying{
-            MusicPlayers.musicStates[1].player.pause()
+        if MusicPlayers.musicStates[1].player == nil{
+            return
+        }
+        
+        if MusicPlayers.musicStates[1].player!.isPlaying{
+            MusicPlayers.musicStates[1].player!.pause()
             MusicPlayers.musicStates[1].isPlaying = false
             updatePlayButton(sender: sender, state: MusicPlayers.musicStates[1])
-            
             print("Right paused")
         }else{
-            MusicPlayers.musicStates[1].player.play()
-            timerRight = Timer.scheduledTimer(timeInterval: 0.23, target: self, selector: #selector(FirstViewController.updateProgressBars), userInfo: nil, repeats: true)
+            MusicPlayers.musicStates[1].player!.play()
+//            timerRight = Timer.scheduledTimer(timeInterval: 0.23, target: self, selector: #selector(FirstViewController.updateProgressBars), userInfo: nil, repeats: true)
             MusicPlayers.musicStates[1].isPlaying = true
             updatePlayButton(sender: sender, state: MusicPlayers.musicStates[1])
-
             print("Right play")
         }
     }
@@ -125,8 +175,6 @@ class FirstViewController: UIViewController, UIWebViewDelegate, AVAudioPlayerDel
             picker.delegate = self
             picker.allowsPickingMultipleItems = false
             picker.prompt = "Select a song"
-            
-//            view.addSubview(picker.view)
             present(picker, animated: true, completion: nil)
         }else{
             print("ERR: Media picker not working")
@@ -150,11 +198,11 @@ class FirstViewController: UIViewController, UIWebViewDelegate, AVAudioPlayerDel
             if let url = item.value(forProperty: MPMediaItemPropertyAssetURL){
                 do{
                     try MusicPlayers.musicStates[activeSelector].player = AVAudioPlayer(contentsOf: url as! URL)
-                    MusicPlayers.musicStates[activeSelector].player.pan = MusicPlayers.musicStates[activeSelector].pan
+                    MusicPlayers.musicStates[activeSelector].player!.pan = MusicPlayers.musicStates[activeSelector].pan
                     if MusicPlayers.musicStates[activeSelector].isPlaying == true {
-                        MusicPlayers.musicStates[activeSelector].player.play()
+                        MusicPlayers.musicStates[activeSelector].player!.play()
                     }
-                    MusicPlayers.musicStates[activeSelector].player.volume = MusicPlayers.musicStates[activeSelector].volume
+                    MusicPlayers.musicStates[activeSelector].player!.volume = MusicPlayers.musicStates[activeSelector].volume
                 }catch{
                     print("Error loading music to left player")
                 }
@@ -164,12 +212,12 @@ class FirstViewController: UIViewController, UIWebViewDelegate, AVAudioPlayerDel
         }
     }
     
-    @IBAction func buttonSelectRightPressed(_ sender: AnyObject) {
+    func buttonSelectRightPressed(_ sender: AnyObject) {
         displayMediaPicker()
         activeSelector = 1
     }
     
-    @IBAction func buttonSelectOnePressed(_ sender: AnyObject) {
+    func buttonSelectOnePressed(_ sender: AnyObject) {
         displayMediaPicker()
         activeSelector = 0
     }
@@ -181,57 +229,32 @@ class FirstViewController: UIViewController, UIWebViewDelegate, AVAudioPlayerDel
         MusicPlayers.musicStates[index].song = nil
     }
     
-    func updatePlayButton(sender:UIButton, state:MusicState){
-        if state.isPlaying == true{
-            sender.setTitle("Pause", for: UIControlState.normal)
-        }else{
-            sender.setTitle("Play", for: UIControlState.normal)
-        }
-    }
     
-    @IBAction func sliderProgressLeftChanged(_ sender: UISlider) {
+    func sliderProgressLeftChanged(_ sender: UISlider) {
         
     }
     
-    @IBAction func sliderProgressRightChanged(_ sender: UISlider) {
+    func sliderProgressRightChanged(_ sender: UISlider) {
     }
     
     func updateProgressBars(){
-        var player = MusicPlayers.musicStates[0].player as! AVAudioPlayer
-        let left = player.currentTime / player.duration
-        sliderProgressLeft.setValue(Float(left), animated: false)
-        labelCurrentTimeLeft.text = stringFromTimeInterval(interval: player.currentTime)
-        
-        player = MusicPlayers.musicStates[1].player
-        let right = player.currentTime / player.duration
-        sliderProgressRight.setValue(Float(right), animated: false)
-        labelCurrentTimeRight.text = stringFromTimeInterval(interval: player.currentTime)
-    }
-    
-    func stringFromTimeInterval(interval:TimeInterval) -> String {
-        let interval = Int(interval)
-        let seconds = interval % 60
-        let minutes = (interval / 60)
-        return String(format: "%02d:%02d", minutes, seconds)
-    }
-    
-    func updateView(){
-        var state = MusicPlayers.musicStates[0]
-        labelDurationLeft.text = stringFromTimeInterval(interval: state.player.duration)
-        if state.song != nil{
-            leftLabelOne.text = state.song!.name ?? "Unknown"
-            leftLabelTwo.text = state.song!.artist ?? "Unknown"
-            imageLeft.image = state.song!.albumArt ?? UIImage()
+        if MusicPlayers.musicStates[0].player != nil{
+            let player = MusicPlayers.musicStates[0].player! as! AVAudioPlayer
+            let left = player.currentTime / player.duration
+            sliderProgressLeft.setValue(Float(left), animated: false)
+            labelCurrentTimeLeft.text = stringFromTimeInterval(interval: player.currentTime)
         }
-        
-        state = MusicPlayers.musicStates[1]
-        labelDurationRight.text = stringFromTimeInterval(interval: state.player.duration)
-        if state.song != nil{
-            rightLabelOne.text = state.song!.name ?? "Unknown"
-            rightLabelTwo.text = state.song!.artist ?? "Unknown"
-            imageRight.image = state.song?.albumArt
-         }
+        if MusicPlayers.musicStates[1].player != nil{
+            
+            let player = MusicPlayers.musicStates[1].player!
+            let right = player.currentTime / player.duration
+            sliderProgressRight.setValue(Float(right), animated: false)
+            labelCurrentTimeRight.text = stringFromTimeInterval(interval: player.currentTime)
+        }
     }
+    
+    
+    
     
     func loadItunesSong(index:Int, item:MPMediaItem){
         let title:String = (item.value(forKey: MPMediaItemPropertyTitle) as? String)!

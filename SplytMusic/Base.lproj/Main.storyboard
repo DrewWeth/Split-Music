@@ -128,8 +128,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Discovery_(Album_Art).jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OxJ-UZ-fwi"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="st-lucia-dancing-on-glass.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ChQ-7n-kWA"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="album-ph.png" translatesAutoresizingMaskIntoConstraints="NO" id="OxJ-UZ-fwi"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="album-ph.png" translatesAutoresizingMaskIntoConstraints="NO" id="ChQ-7n-kWA"/>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCU-f6-APZ">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="68" id="zBg-74-bik"/>
@@ -304,7 +304,6 @@
     </scenes>
     <resources>
         <image name="CI5wl3.png" width="640" height="1136"/>
-        <image name="Discovery_(Album_Art).jpg" width="600" height="600"/>
-        <image name="st-lucia-dancing-on-glass.jpg" width="806" height="806"/>
+        <image name="album-ph.png" width="500" height="500"/>
     </resources>
 </document>

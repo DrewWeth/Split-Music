@@ -8,10 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		FE16A6421DA985F000294D7F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE16A6411DA985F000294D7F /* MediaPlayer.framework */; };
-		FE1BBCEF1DAAE4E600E2BB89 /* Discovery_(Album_Art).jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE1BBCEE1DAAE4E600E2BB89 /* Discovery_(Album_Art).jpg */; };
-		FE1BBCF11DAAE4EC00E2BB89 /* st-lucia-dancing-on-glass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE1BBCF01DAAE4EC00E2BB89 /* st-lucia-dancing-on-glass.jpg */; };
 		FE3EE6F11DAAD88300FF0FC4 /* Capture.PNG in Resources */ = {isa = PBXBuildFile; fileRef = FE3EE6F01DAAD88300FF0FC4 /* Capture.PNG */; };
 		FE3EE6F31DAADE7600FF0FC4 /* CI5wl3.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EE6F21DAADE7600FF0FC4 /* CI5wl3.png */; };
+		FE8D152B1DB6C855002C6569 /* album-ph.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8D152A1DB6C855002C6569 /* album-ph.png */; };
 		FEACB1C81DA8B79B0068AC10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB1C71DA8B79B0068AC10 /* AppDelegate.swift */; };
 		FEACB1CA1DA8B79B0068AC10 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB1C91DA8B79B0068AC10 /* FirstViewController.swift */; };
 		FEACB1CC1DA8B79B0068AC10 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB1CB1DA8B79B0068AC10 /* SecondViewController.swift */; };
@@ -20,10 +19,26 @@
 		FEACB1D41DA8B79B0068AC10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEACB1D21DA8B79B0068AC10 /* LaunchScreen.storyboard */; };
 		FEACB1DF1DA8B79B0068AC10 /* SplytMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB1DE1DA8B79B0068AC10 /* SplytMusicTests.swift */; };
 		FEACB1EA1DA8B79B0068AC10 /* SplytMusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB1E91DA8B79B0068AC10 /* SplytMusicUITests.swift */; };
-		FEACB1F91DA9579F0068AC10 /* daft_punk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEACB1F71DA9579F0068AC10 /* daft_punk.mp3 */; };
-		FEACB1FA1DA9579F0068AC10 /* st_lucia.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEACB1F81DA9579F0068AC10 /* st_lucia.mp3 */; };
 		FEACB1FF1DA9665A0068AC10 /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB1FE1DA9665A0068AC10 /* MusicManager.swift */; };
 		FEACB2011DA9698D0068AC10 /* MusicState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB2001DA9698D0068AC10 /* MusicState.swift */; };
+		FED7EAA11DAF3BC50085C282 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = FED7EA8F1DAF3BC50085C282 /* Contents.json */; };
+		FED7EAA21DAF3BC50085C282 /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED7EA901DAF3BC50085C282 /* Icon-App-20x20@1x.png */; };
+		FED7EAA31DAF3BC50085C282 /* Icon-App-20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED7EA911DAF3BC50085C282 /* Icon-App-20x20@2x.png */; };
+		FED7EAA41DAF3BC50085C282 /* Icon-App-20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED7EA921DAF3BC50085C282 /* Icon-App-20x20@3x.png */; };
+		FED7EAA51DAF3BC50085C282 /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED7EA931DAF3BC50085C282 /* Icon-App-29x29@1x.png */; };
+		FED7EAA61DAF3BC50085C282 /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED7EA941DAF3BC50085C282 /* Icon-App-29x29@2x.png */; };
+		FED7EAA71DAF3BC50085C282 /* Icon-App-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED7EA951DAF3BC50085C282 /* Icon-App-29x29@3x.png */; };
+		FED7EAA81DAF3BC50085C282 /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED7EA961DAF3BC50085C282 /* Icon-App-40x40@1x.png */; };
+		FED7EAA91DAF3BC50085C282 /* Icon-App-40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED7EA971DAF3BC50085C282 /* Icon-App-40x40@2x.png */; };
+		FED7EAAA1DAF3BC50085C282 /* Icon-App-40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED7EA981DAF3BC50085C282 /* Icon-App-40x40@3x.png */; };
+		FED7EAAB1DAF3BC50085C282 /* Icon-App-57x57@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED7EA991DAF3BC50085C282 /* Icon-App-57x57@1x.png */; };
+		FED7EAAC1DAF3BC50085C282 /* Icon-App-60x60@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED7EA9A1DAF3BC50085C282 /* Icon-App-60x60@1x.png */; };
+		FED7EAAD1DAF3BC50085C282 /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED7EA9B1DAF3BC50085C282 /* Icon-App-60x60@2x.png */; };
+		FED7EAAE1DAF3BC50085C282 /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED7EA9C1DAF3BC50085C282 /* Icon-App-60x60@3x.png */; };
+		FED7EAAF1DAF3BC50085C282 /* Icon-App-76x76@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED7EA9D1DAF3BC50085C282 /* Icon-App-76x76@1x.png */; };
+		FED7EAB01DAF3BC50085C282 /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED7EA9E1DAF3BC50085C282 /* Icon-App-76x76@2x.png */; };
+		FED7EAB11DAF3BC50085C282 /* Icon-App-76x76@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED7EA9F1DAF3BC50085C282 /* Icon-App-76x76@3x.png */; };
+		FED7EAB21DAF3BC50085C282 /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FED7EAA01DAF3BC50085C282 /* Icon-App-83.5x83.5@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +60,9 @@
 
 /* Begin PBXFileReference section */
 		FE16A6411DA985F000294D7F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		FE1BBCEE1DAAE4E600E2BB89 /* Discovery_(Album_Art).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Discovery_(Album_Art).jpg"; sourceTree = "<group>"; };
-		FE1BBCF01DAAE4EC00E2BB89 /* st-lucia-dancing-on-glass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "st-lucia-dancing-on-glass.jpg"; sourceTree = "<group>"; };
 		FE3EE6F01DAAD88300FF0FC4 /* Capture.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Capture.PNG; sourceTree = "<group>"; };
 		FE3EE6F21DAADE7600FF0FC4 /* CI5wl3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CI5wl3.png; sourceTree = "<group>"; };
+		FE8D152A1DB6C855002C6569 /* album-ph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "album-ph.png"; sourceTree = "<group>"; };
 		FEACB1C41DA8B79B0068AC10 /* SplytMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplytMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEACB1C71DA8B79B0068AC10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEACB1C91DA8B79B0068AC10 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -63,10 +77,26 @@
 		FEACB1E51DA8B79B0068AC10 /* SplytMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplytMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEACB1E91DA8B79B0068AC10 /* SplytMusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplytMusicUITests.swift; sourceTree = "<group>"; };
 		FEACB1EB1DA8B79B0068AC10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FEACB1F71DA9579F0068AC10 /* daft_punk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = daft_punk.mp3; sourceTree = "<group>"; };
-		FEACB1F81DA9579F0068AC10 /* st_lucia.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = st_lucia.mp3; sourceTree = "<group>"; };
 		FEACB1FE1DA9665A0068AC10 /* MusicManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
 		FEACB2001DA9698D0068AC10 /* MusicState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicState.swift; sourceTree = "<group>"; };
+		FED7EA8F1DAF3BC50085C282 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		FED7EA901DAF3BC50085C282 /* Icon-App-20x20@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@1x.png"; sourceTree = "<group>"; };
+		FED7EA911DAF3BC50085C282 /* Icon-App-20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@2x.png"; sourceTree = "<group>"; };
+		FED7EA921DAF3BC50085C282 /* Icon-App-20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@3x.png"; sourceTree = "<group>"; };
+		FED7EA931DAF3BC50085C282 /* Icon-App-29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@1x.png"; sourceTree = "<group>"; };
+		FED7EA941DAF3BC50085C282 /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
+		FED7EA951DAF3BC50085C282 /* Icon-App-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@3x.png"; sourceTree = "<group>"; };
+		FED7EA961DAF3BC50085C282 /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
+		FED7EA971DAF3BC50085C282 /* Icon-App-40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@2x.png"; sourceTree = "<group>"; };
+		FED7EA981DAF3BC50085C282 /* Icon-App-40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@3x.png"; sourceTree = "<group>"; };
+		FED7EA991DAF3BC50085C282 /* Icon-App-57x57@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-57x57@1x.png"; sourceTree = "<group>"; };
+		FED7EA9A1DAF3BC50085C282 /* Icon-App-60x60@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@1x.png"; sourceTree = "<group>"; };
+		FED7EA9B1DAF3BC50085C282 /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
+		FED7EA9C1DAF3BC50085C282 /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
+		FED7EA9D1DAF3BC50085C282 /* Icon-App-76x76@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@1x.png"; sourceTree = "<group>"; };
+		FED7EA9E1DAF3BC50085C282 /* Icon-App-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@2x.png"; sourceTree = "<group>"; };
+		FED7EA9F1DAF3BC50085C282 /* Icon-App-76x76@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@3x.png"; sourceTree = "<group>"; };
+		FED7EAA01DAF3BC50085C282 /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,16 +157,14 @@
 		FEACB1C61DA8B79B0068AC10 /* SplytMusic */ = {
 			isa = PBXGroup;
 			children = (
-				FEACB1F71DA9579F0068AC10 /* daft_punk.mp3 */,
-				FEACB1F81DA9579F0068AC10 /* st_lucia.mp3 */,
-				FE1BBCF01DAAE4EC00E2BB89 /* st-lucia-dancing-on-glass.jpg */,
-				FE1BBCEE1DAAE4E600E2BB89 /* Discovery_(Album_Art).jpg */,
+				FE8D152A1DB6C855002C6569 /* album-ph.png */,
 				FE3EE6F21DAADE7600FF0FC4 /* CI5wl3.png */,
 				FE3EE6F01DAAD88300FF0FC4 /* Capture.PNG */,
 				FEACB1FB1DA957A80068AC10 /* db */,
 				FEACB1C71DA8B79B0068AC10 /* AppDelegate.swift */,
 				FEACB1C91DA8B79B0068AC10 /* FirstViewController.swift */,
 				FEACB1CB1DA8B79B0068AC10 /* SecondViewController.swift */,
+				FED7EA8E1DAF3BC50085C282 /* AppIcon.appiconset */,
 				FEACB1CD1DA8B79B0068AC10 /* Main.storyboard */,
 				FEACB1D01DA8B79B0068AC10 /* Assets.xcassets */,
 				FEACB1D21DA8B79B0068AC10 /* LaunchScreen.storyboard */,
@@ -170,6 +198,31 @@
 			children = (
 			);
 			name = db;
+			sourceTree = "<group>";
+		};
+		FED7EA8E1DAF3BC50085C282 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				FED7EA8F1DAF3BC50085C282 /* Contents.json */,
+				FED7EA901DAF3BC50085C282 /* Icon-App-20x20@1x.png */,
+				FED7EA911DAF3BC50085C282 /* Icon-App-20x20@2x.png */,
+				FED7EA921DAF3BC50085C282 /* Icon-App-20x20@3x.png */,
+				FED7EA931DAF3BC50085C282 /* Icon-App-29x29@1x.png */,
+				FED7EA941DAF3BC50085C282 /* Icon-App-29x29@2x.png */,
+				FED7EA951DAF3BC50085C282 /* Icon-App-29x29@3x.png */,
+				FED7EA961DAF3BC50085C282 /* Icon-App-40x40@1x.png */,
+				FED7EA971DAF3BC50085C282 /* Icon-App-40x40@2x.png */,
+				FED7EA981DAF3BC50085C282 /* Icon-App-40x40@3x.png */,
+				FED7EA991DAF3BC50085C282 /* Icon-App-57x57@1x.png */,
+				FED7EA9A1DAF3BC50085C282 /* Icon-App-60x60@1x.png */,
+				FED7EA9B1DAF3BC50085C282 /* Icon-App-60x60@2x.png */,
+				FED7EA9C1DAF3BC50085C282 /* Icon-App-60x60@3x.png */,
+				FED7EA9D1DAF3BC50085C282 /* Icon-App-76x76@1x.png */,
+				FED7EA9E1DAF3BC50085C282 /* Icon-App-76x76@2x.png */,
+				FED7EA9F1DAF3BC50085C282 /* Icon-App-76x76@3x.png */,
+				FED7EAA01DAF3BC50085C282 /* Icon-App-83.5x83.5@2x.png */,
+			);
+			path = AppIcon.appiconset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,15 +335,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE1BBCF11DAAE4EC00E2BB89 /* st-lucia-dancing-on-glass.jpg in Resources */,
 				FE3EE6F11DAAD88300FF0FC4 /* Capture.PNG in Resources */,
+				FED7EAA31DAF3BC50085C282 /* Icon-App-20x20@2x.png in Resources */,
 				FEACB1D41DA8B79B0068AC10 /* LaunchScreen.storyboard in Resources */,
 				FEACB1D11DA8B79B0068AC10 /* Assets.xcassets in Resources */,
+				FED7EAA81DAF3BC50085C282 /* Icon-App-40x40@1x.png in Resources */,
+				FE8D152B1DB6C855002C6569 /* album-ph.png in Resources */,
+				FED7EAAD1DAF3BC50085C282 /* Icon-App-60x60@2x.png in Resources */,
+				FED7EAA91DAF3BC50085C282 /* Icon-App-40x40@2x.png in Resources */,
+				FED7EAA71DAF3BC50085C282 /* Icon-App-29x29@3x.png in Resources */,
+				FED7EAA61DAF3BC50085C282 /* Icon-App-29x29@2x.png in Resources */,
+				FED7EAB21DAF3BC50085C282 /* Icon-App-83.5x83.5@2x.png in Resources */,
+				FED7EAAC1DAF3BC50085C282 /* Icon-App-60x60@1x.png in Resources */,
 				FEACB1CF1DA8B79B0068AC10 /* Main.storyboard in Resources */,
-				FEACB1FA1DA9579F0068AC10 /* st_lucia.mp3 in Resources */,
-				FEACB1F91DA9579F0068AC10 /* daft_punk.mp3 in Resources */,
+				FED7EAB01DAF3BC50085C282 /* Icon-App-76x76@2x.png in Resources */,
+				FED7EAA11DAF3BC50085C282 /* Contents.json in Resources */,
+				FED7EAA51DAF3BC50085C282 /* Icon-App-29x29@1x.png in Resources */,
+				FED7EAB11DAF3BC50085C282 /* Icon-App-76x76@3x.png in Resources */,
+				FED7EAA41DAF3BC50085C282 /* Icon-App-20x20@3x.png in Resources */,
+				FED7EAAA1DAF3BC50085C282 /* Icon-App-40x40@3x.png in Resources */,
 				FE3EE6F31DAADE7600FF0FC4 /* CI5wl3.png in Resources */,
-				FE1BBCEF1DAAE4E600E2BB89 /* Discovery_(Album_Art).jpg in Resources */,
+				FED7EAAB1DAF3BC50085C282 /* Icon-App-57x57@1x.png in Resources */,
+				FED7EAA21DAF3BC50085C282 /* Icon-App-20x20@1x.png in Resources */,
+				FED7EAAE1DAF3BC50085C282 /* Icon-App-60x60@3x.png in Resources */,
+				FED7EAAF1DAF3BC50085C282 /* Icon-App-76x76@1x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
