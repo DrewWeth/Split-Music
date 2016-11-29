@@ -59,20 +59,20 @@
                                     <action selector="buttonSelectRightPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="EdT-ok-HuN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNZ-xQ-KgS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNZ-xQ-KgS">
                                 <frame key="frameInset" minX="15" minY="120" width="168" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRW-FG-HTs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRW-FG-HTs">
                                 <frame key="frameInset" minX="204" minY="123" width="155" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lm1-Xp-gZp">
-                                <frame key="frameInset" minX="16" minY="99" width="168" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lm1-Xp-gZp">
+                                <frame key="frameInset" minX="16" minY="67" width="168" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -138,8 +138,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky2-qo-rrc">
-                                <frame key="frameInset" minX="204" minY="97" width="155" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky2-qo-rrc">
+                                <frame key="frameInset" minX="195" minY="67" width="164" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -153,7 +153,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ChQ-7n-kWA" secondAttribute="trailing" constant="-3.5" id="4Ba-34-ajf"/>
                             <constraint firstItem="oCU-f6-APZ" firstAttribute="leading" secondItem="Zrt-Ek-O8k" secondAttribute="trailing" constant="14" id="5kV-0v-cAR"/>
                             <constraint firstItem="TNZ-xQ-KgS" firstAttribute="centerX" secondItem="lm1-Xp-gZp" secondAttribute="centerX" id="7TE-ET-zex"/>
-                            <constraint firstItem="SRW-FG-HTs" firstAttribute="centerX" secondItem="fY7-oh-4Cm" secondAttribute="centerX" id="7yO-RV-obN"/>
                             <constraint firstItem="7Di-Nh-eYG" firstAttribute="top" secondItem="nW1-Gb-apQ" secondAttribute="bottom" constant="-1" id="87e-vv-kVb"/>
                             <constraint firstItem="lm1-Xp-gZp" firstAttribute="leading" secondItem="OxJ-UZ-fwi" secondAttribute="leading" id="8y6-SL-RO2"/>
                             <constraint firstItem="ChQ-7n-kWA" firstAttribute="leading" secondItem="OxJ-UZ-fwi" secondAttribute="trailing" constant="11.5" id="B3e-Ir-THM"/>
