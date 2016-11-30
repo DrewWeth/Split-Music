@@ -58,14 +58,15 @@ class FirstViewController: UIViewController, AVAudioPlayerDelegate, MPMediaPicke
     func updateView(){
         var state = MusicPlayers.musicStates[0]
         if state.player != nil{
-         
-        labelDurationLeft.text = stringFromTimeInterval(interval: state.player!.duration)
-
+            labelDurationLeft.text = stringFromTimeInterval(interval: state.player!.duration)
             if state.song != nil{
                 leftLabelOne.text = state.song!.name ?? "Unknown"
                 leftLabelTwo.text = state.song!.artist ?? "Unknown"
                 imageLeft.image = state.song!.albumArt ?? UIImage(named:"album-ph.png")
             }
+        }else{
+            leftLabelOne.text = "Select a song"
+            leftLabelTwo.text = ""
         }
         
         state = MusicPlayers.musicStates[1]
@@ -76,6 +77,9 @@ class FirstViewController: UIViewController, AVAudioPlayerDelegate, MPMediaPicke
                 rightLabelTwo.text = state.song!.artist ?? "Unknown"
                 imageRight.image = state.song?.albumArt ?? UIImage(named:"album-ph.png")
             }
+        }else{
+            rightLabelOne.text = "Select a song"
+            rightLabelTwo.text = ""
         }
     }
     
@@ -88,7 +92,7 @@ class FirstViewController: UIViewController, AVAudioPlayerDelegate, MPMediaPicke
         // Visual edits
 //        let newSize = CGSize(width: 10, height: 10)
         
-        let defaultImage = UIImage(contentsOfFile: "album-ph.png")
+        let defaultImage = UIImage()
         sliderProgressRight.setThumbImage(defaultImage, for: UIControlState.normal)
         sliderProgressLeft.setThumbImage(defaultImage, for: UIControlState.normal)
         
@@ -115,10 +119,12 @@ class FirstViewController: UIViewController, AVAudioPlayerDelegate, MPMediaPicke
         }else{
             MusicPlayers.musicStates[0].player!.play()
         
-//            Timer.scheduledTimer(withTimeInterval: 0.23, repeats: true, block: (timer:Timer) -> {
-//                updateProgressBars()
-//            })
-//            
+        
+            Timer.scheduledTimer(withTimeInterval: 0.23, repeats: true, block: {
+                (timer:Timer) -> () in
+                self.updateProgressBars()
+            })
+            
             MusicPlayers.musicStates[0].isPlaying = true
             updatePlayButton(sender: sender, state: MusicPlayers.musicStates[0])
             print("Left play")
@@ -155,7 +161,7 @@ class FirstViewController: UIViewController, AVAudioPlayerDelegate, MPMediaPicke
             print("Right paused")
         }else{
             MusicPlayers.musicStates[1].player!.play()
-//            timerRight = Timer.scheduledTimer(timeInterval: 0.23, target: self, selector: #selector(FirstViewController.updateProgressBars), userInfo: nil, repeats: true)
+            timerRight = Timer.scheduledTimer(timeInterval: 0.23, target: self, selector: #selector(FirstViewController.updateProgressBars), userInfo: nil, repeats: true)
             MusicPlayers.musicStates[1].isPlaying = true
             updatePlayButton(sender: sender, state: MusicPlayers.musicStates[1])
             print("Right play")
@@ -192,8 +198,7 @@ class FirstViewController: UIViewController, AVAudioPlayerDelegate, MPMediaPicke
         for item in mediaItemCollection.items as [MPMediaItem]{
             print(item.value(forProperty: MPMediaItemPropertyTitle))
             print(item.value(forProperty: MPMediaItemPropertyAssetURL) as? NSURL)
-            loadItunesSong(index: activeSelector, item: item)
-            updateView()
+            
             
             if let url = item.value(forProperty: MPMediaItemPropertyAssetURL){
                 do{
@@ -209,6 +214,8 @@ class FirstViewController: UIViewController, AVAudioPlayerDelegate, MPMediaPicke
             }else{
                 print("ERR: No url for media")
             }
+            loadItunesSong(index: activeSelector, item: item)
+            updateView()
         }
     }
     
